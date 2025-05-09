@@ -28,7 +28,7 @@ apps apprunning = None;
 
 bool infected = false;
 
-int webprogress = 0;
+int webprogress  = -1;
 
 bool ismusicplaying = false;
 
