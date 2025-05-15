@@ -803,20 +803,31 @@ namespace Input
             {
                 if (b == a)
                 {
-                    std::thread([=]() {
-                        std::string scriptPath = "./apps/" + a;
+                    if (Utils::tolowercasestring(a).find("shell") != std::string::npos) {
+                        std::ifstream ifs(a);
 
-                        lua_State* L = luahandle;
-                        int result = luaL_dofile(L, scriptPath.c_str());
-                        if (result != LUA_OK) {
-                            const char* err = lua_tostring(L, -1);
-                            lua_pop(L, 1);
+                        std::string line;
 
-                            std::vector<std::string> msg = { std::string("Lua error: ") + err + "\n" };
-                            Utils::PrintScreen(msg);
+                        while (std::getline(ifs, line))
+                        {
+                            Input::execcmd(line);
                         }
-                        }).detach();
+                    }
+                    else {
+                        std::thread([=]() {
+                            std::string scriptPath = "./apps/" + a;
 
+                            lua_State* L = luahandle;
+                            int result = luaL_dofile(L, scriptPath.c_str());
+                            if (result != LUA_OK) {
+                                const char* err = lua_tostring(L, -1);
+                                lua_pop(L, 1);
+
+                                std::vector<std::string> msg = { std::string("Lua error: ") + err + "\n" };
+                                Utils::PrintScreen(msg);
+                            }
+                            }).detach();
+                    }
                     return true;
                 }
             
@@ -1121,6 +1132,15 @@ int main(void)
                 if (IsMouseButtonPressed(0))
                 {
                     std::remove("save.xml");
+                    std::remove("./apps/homedir/proxies.host");
+                    
+                    std::ofstream MyFile("./apps/homedir/proxies.host");
+
+                    MyFile << "--this is an proxies file some websites require an proxy to access"<< std::endl;
+                    MyFile << "put proxies here--" << std::endl;
+
+                    MyFile.close();
+
                     exit(0);
                 }
             }

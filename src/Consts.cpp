@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <filesystem>
+#include "FSudo.h"
 
 namespace fs = std::filesystem;
 
@@ -31,6 +32,20 @@ void loadapppaths()
 
 	}
 
+	try
+	{
+		std::string path = "./apps/";
+		for (const auto& entry : fs::directory_iterator(path)) {
+			if (entry.is_regular_file() && Utils::tolowercasestring(entry.path().extension().string()) == ".shell") {
+				apppaths.push_back(entry.path().filename().string());
+			}
+		}
+	}
+	catch (const std::exception&)
+	{
+
+	}
+
 	return;
 }
 
@@ -48,6 +63,6 @@ void loadmanual()
 	manual.push_back("9 - bcolor\n\nbackground color utility\n");
 	manual.push_back("10 - clear\n\nscreen clean utility\n");
 	manual.push_back("11 - debug\n\ndebug utility\n");
-	manual.push_back("12 - no theres no exec command\nif writting an automation script use my lua apis\nsystem command which is basically exec\n");
+	manual.push_back("12 use lua scripts if you want async execution\nuse shell scripts if you dont care");
 	return;
 }
