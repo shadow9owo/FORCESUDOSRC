@@ -354,34 +354,33 @@ namespace Input
                     if (Utils::tolowercasestring(Utils::split(b, " ").at(1)) == "biometric-vault.tech")
                     {
                         printf("%s", "1");
-                        if (Utils::containsproxy("wowb"))
+                        if (Utils::containsproxy("awiudhiuhawuihdui"))
                         {
-                            if (webprogress < 2)
+                            if (webprogress < 1)
                             {
                                 printf("%s", "1");
+                                webprogress = webprogress + 1;
+                                apprunning = Browser;
+                                browser::browserbuff = {};
+                                currentline = 0;
                                 if (std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)))
                                 {
-                                    webprogress =2;
-                                    apprunning = Browser;
-                                    browser::browserbuff = {};
-                                    currentline = 0;
                                     std::ifstream file(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1));
                                     std::string str;
                                     while (std::getline(file, str))
                                     {
-                                        browser::browserbuff.push_back(str + "\n");
+                                        browser::browserbuff.push_back(str);
                                     }
+                                    stringbuffer = browser::browserbuff;
                                 }
                                 printf("%s", "1");
                                 browser::filename = (fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)).string();
-                                isanapprunning = false;
-                                return true;
                             }
                         }
                         else {
                             apprunning = None;
                             std::vector<std::string> a;
-                            a.push_back("404\n");
+                            a.push_back("404");
                             Utils::PrintScreen(a);
                             isanapprunning = false;
                             return true;
@@ -391,30 +390,29 @@ namespace Input
                     {
                         if (Utils::containsproxy("proxy27398shdwdwa"))
                         {
-                            if (webprogress < 3)
+                            if (webprogress < 2)
                             {
+                                webprogress = webprogress + 1;
+                                apprunning = Browser;
+                                browser::browserbuff = {};
+                                currentline = 0;
                                 if (std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)))
                                 {
-                                    webprogress = 3;
-                                    apprunning = Browser;
-                                    browser::browserbuff = {};
-                                    currentline = 0;
                                     std::ifstream file(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1));
                                     std::string str;
                                     while (std::getline(file, str))
                                     {
-                                        browser::browserbuff.push_back(str + "\n");
+                                        browser::browserbuff.push_back(str);
                                     }
+                                    stringbuffer = browser::browserbuff;
                                 }
                                 browser::filename = (fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)).string();
-                                isanapprunning = false;
-                                return true;
                             }
                         }
                         else {
                             apprunning = None;
                             std::vector<std::string> a;
-                            a.push_back("404\n");
+                            a.push_back("404");
                             Utils::PrintScreen(a);
                             isanapprunning = false;
                             return true;
@@ -424,30 +422,29 @@ namespace Input
                     {
                         if (Utils::containsproxy("iwhjaidj"))
                         {
-                            if (webprogress < 4)
+                            if (webprogress < 3)
                             {
+                                webprogress = webprogress + 1;
+                                apprunning = Browser;
+                                browser::browserbuff = {};
+                                currentline = 0;
                                 if (std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)))
                                 {
-                                    webprogress = 4;
-                                    apprunning = Browser;
-                                    browser::browserbuff = {};
-                                    currentline = 0;
                                     std::ifstream file(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1));
                                     std::string str;
                                     while (std::getline(file, str))
                                     {
-                                        browser::browserbuff.push_back(str + "\n");
+                                        browser::browserbuff.push_back(str);
                                     }
+                                    stringbuffer = browser::browserbuff;
                                 }
                                 browser::filename = (fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)).string();
-                                isanapprunning = false;
-                                return true;
                             }
                         }
                         else {
                             apprunning = None;
                             std::vector<std::string> a;
-                            a.push_back("404\n");
+                            a.push_back("404");
                             Utils::PrintScreen(a);
                             isanapprunning = false;
                             return true;
@@ -455,22 +452,19 @@ namespace Input
                     }
                     else if (Utils::tolowercasestring(Utils::split(b, " ").at(1)) == "brainlease.net")
                     {
-
+                        webprogress = webprogress + 1;
+                        apprunning = Browser;
+                        browser::browserbuff = {};
+                        currentline = 0;
                         if (std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)))
                         {
-                            if (webprogress < 0)
-                            {
-                                webprogress = 0;
-                            }
-                            apprunning = Browser;
-                            browser::browserbuff = {};
-                            currentline = 0;
                             std::ifstream file(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1));
                             std::string str;
                             while (std::getline(file, str))
                             {
-                                browser::browserbuff.push_back(str + "\n");
+                                browser::browserbuff.push_back(str);
                             }
+                            stringbuffer = browser::browserbuff;
                         }
                         else {
                             apprunning = None;
@@ -481,29 +475,31 @@ namespace Input
                     }
                     else if (Utils::tolowercasestring(Utils::split(b, " ").at(1)) == "fleshforhire.store")
                     {
-                        if (webprogress < 1)
+                        if (Utils::containsproxy("uiaehwsdiujawhuio"))
                         {
-                            if (std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)))
+                            if (webprogress < 4)
                             {
-                                webprogress = 1;
+                                webprogress = webprogress + 1;
                                 apprunning = Browser;
                                 browser::browserbuff = {};
                                 currentline = 0;
-                                std::ifstream file(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1));
-                                std::string str;
-                                while (std::getline(file, str))
+                                if (std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)))
                                 {
-                                    browser::browserbuff.push_back(str + "\n");
+                                    std::ifstream file(fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1));
+                                    std::string str;
+                                    while (std::getline(file, str))
+                                    {
+                                        browser::browserbuff.push_back(str);
+                                    }
+                                    stringbuffer = browser::browserbuff;
                                 }
+                                browser::filename = (fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)).string();
                             }
-                            browser::filename = (fs::path(GetWorkingDirectory()) / "apps" / "websites" / Utils::split(b, " ").at(1)).string();
-                            isanapprunning = false;
-                            return true;
                         }
                         else {
                             apprunning = None;
                             std::vector<std::string> a;
-                            a.push_back("404\n");
+                            a.push_back("404");
                             Utils::PrintScreen(a);
                             isanapprunning = false;
                             return true;
@@ -511,13 +507,13 @@ namespace Input
                     }
                     else if (Utils::tolowercasestring(Utils::split(b, " ").at(1)) == "redroom.xxx")
                     {
-                        if (Utils::containsproxy("uiaehwsdiujawhuio"))
+                        if (Utils::containsproxy("wowb"))
                         {
                             if (webprogress < 4)
                             {
                                 apprunning = None;
                                 std::vector<std::string> a;
-                                a.push_back("kill yourself cheating bitch\n");
+                                a.push_back("kill yourself cheating bitch");
                                 Utils::PrintScreen(a);
                                 isanapprunning = false;
                                 return true;
@@ -531,7 +527,7 @@ namespace Input
                         else {
                             apprunning = None;
                             std::vector<std::string> a;
-                            a.push_back("404\n");
+                            a.push_back("404");
                             Utils::PrintScreen(a);
                             isanapprunning = false;
                             return true;
@@ -540,7 +536,7 @@ namespace Input
                     else {
                         apprunning = None;
                         std::vector<std::string> a;
-                        a.push_back("404\n");
+                        a.push_back("404");
                         Utils::PrintScreen(a);
                         isanapprunning = false;
                         return true;
@@ -576,7 +572,7 @@ namespace Input
                             textcolor = MAGENTA;
                             break;
                         case 6:
-                            textcolor = { 0, 255, 255 ,255 };
+                            textcolor = { 0, 255, 255 };
                             break;
                         case 7:
                             textcolor = WHITE;
@@ -585,25 +581,25 @@ namespace Input
                             textcolor = DARKGRAY;
                             break;
                         case 9:
-                            textcolor = { 255, 127, 127,255 };
+                            textcolor = { 255, 127, 127 };
                             break;
                         case 10:
-                            textcolor = {144,238, 144,255 };
+                            textcolor = {144,238, 144};
                             break;
                         case 11:
-                            textcolor = { 173, 216, 230,255 };
+                            textcolor = { 173, 216, 230 };
                             break;
                         case 12:
-                            textcolor = { 255, 255, 237,255 };
+                            textcolor = { 255, 255, 237 };
                             break;
                         case 13:
-                            textcolor = {255,128,255,255 };
+                            textcolor = {255,128,255};
                             break;
                         case 14:
-                            textcolor = { 224, 255, 255,255 };
+                            textcolor = { 224, 255, 255 };
                             break;
                         case 15:
-                            textcolor = { 255, 255, 247,255 };
+                            textcolor = { 255, 255, 247 };
                             break;
                     default:
                         throw std::runtime_error("invalid color code bruh");
@@ -644,7 +640,7 @@ namespace Input
                             bgcolor = MAGENTA;
                             break;
                         case 6:
-                            bgcolor = { 0, 255, 255,255 };
+                            bgcolor = { 0, 255, 255 };
                             break;
                         case 7:
                             bgcolor = WHITE;
@@ -653,25 +649,25 @@ namespace Input
                             bgcolor = DARKGRAY;
                             break;
                         case 9:
-                            bgcolor = { 255, 127, 127,255 };
+                            bgcolor = { 255, 127, 127 };
                             break;
                         case 10:
-                            bgcolor = { 144,238, 144 ,255 };
+                            bgcolor = { 144,238, 144 };
                             break;
                         case 11:
-                            bgcolor = { 173, 216, 230,255 };
+                            bgcolor = { 173, 216, 230 };
                             break;
                         case 12:
-                            bgcolor = { 255, 255, 237,255 };
+                            bgcolor = { 255, 255, 237 };
                             break;
                         case 13:
-                            bgcolor = { 255,128,255,255 };
+                            bgcolor = { 255,128,255 };
                             break;
                         case 14:
-                            bgcolor = { 224, 255, 255,255 };
+                            bgcolor = { 224, 255, 255 };
                             break;
                         case 15:
-                            bgcolor = { 255, 255, 247,255 };
+                            bgcolor = { 255, 255, 247 };
                             break;
                     default:
                         throw std::runtime_error("invalid color code bruh");
@@ -721,6 +717,7 @@ namespace Input
             }
             else if (Utils::tolowercasestring(Utils::split(b, " ").at(0)) == "cat")
             {
+                if (!(std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "homedir" / Utils::split(b, " ").at(1)))) { return false; isanapprunning = false; }
                 try
                 {
                     auto parts = Utils::split(b, " ");
@@ -729,7 +726,6 @@ namespace Input
                         Utils::PrintScreen({ "nulinput\n" });
                         return false;
                     }
-                    if (!(std::filesystem::exists(fs::path(GetWorkingDirectory()) / "apps" / "homedir" / Utils::split(b, " ").at(1)))) { return false; isanapprunning = false; }
 
                     std::ifstream file(fs::path(GetWorkingDirectory()) / "apps" / "homedir" / parts.at(1));
                     if (!file)
@@ -803,31 +799,20 @@ namespace Input
             {
                 if (b == a)
                 {
-                    if (Utils::tolowercasestring(a).find("shell") != std::string::npos) {
-                        std::ifstream ifs(a);
+                    std::thread([=]() {
+                        std::string scriptPath = "./apps/" + a;
 
-                        std::string line;
+                        lua_State* L = luahandle;
+                        int result = luaL_dofile(L, scriptPath.c_str());
+                        if (result != LUA_OK) {
+                            const char* err = lua_tostring(L, -1);
+                            lua_pop(L, 1);
 
-                        while (std::getline(ifs, line))
-                        {
-                            Input::execcmd(line);
+                            std::vector<std::string> msg = { std::string("Lua error: ") + err + "\n" };
+                            Utils::PrintScreen(msg);
                         }
-                    }
-                    else {
-                        std::thread([=]() {
-                            std::string scriptPath = "./apps/" + a;
+                        }).detach();
 
-                            lua_State* L = luahandle;
-                            int result = luaL_dofile(L, scriptPath.c_str());
-                            if (result != LUA_OK) {
-                                const char* err = lua_tostring(L, -1);
-                                lua_pop(L, 1);
-
-                                std::vector<std::string> msg = { std::string("Lua error: ") + err + "\n" };
-                                Utils::PrintScreen(msg);
-                            }
-                            }).detach();
-                    }
                     return true;
                 }
             
@@ -1035,14 +1020,7 @@ int main(void)
 
     InitAudioDevice();
 
-    try
-    {
-        CutscenePlayer::init();
-    }
-    catch (const std::exception&)
-    {
-
-    }
+    CutscenePlayer::init();
 
     SetConfigFlags(FLAG_MSAA_4X_HINT);
 
@@ -1132,15 +1110,6 @@ int main(void)
                 if (IsMouseButtonPressed(0))
                 {
                     std::remove("save.xml");
-                    std::remove("./apps/homedir/proxies.host");
-                    
-                    std::ofstream MyFile("./apps/homedir/proxies.host");
-
-                    MyFile << "--this is an proxies file some websites require an proxy to access"<< std::endl;
-                    MyFile << "put proxies here--" << std::endl;
-
-                    MyFile.close();
-
                     exit(0);
                 }
             }
@@ -1177,7 +1146,6 @@ int main(void)
                         a.push_back("#################################\n");
                         a.push_back("this OS comes with a manual\n");
                         a.push_back("to use the manual type man %page%\n");
-                        a.push_back("use clist to list commands\n");
                         a.push_back("#################################\n");
                         Utils::PrintScreen(a);
                     }
