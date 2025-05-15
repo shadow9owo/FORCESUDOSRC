@@ -36,6 +36,8 @@ std::vector<Music> musiclist = {};
 
 Scenes currentscene = MainMenu;
 
+std::vector<std::string> whitelistedmods{};
+
 void getls() {
 	if (!ls.empty()) {
 		ls.clear();

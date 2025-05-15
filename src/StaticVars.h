@@ -53,4 +53,6 @@ enum Scenes
 
 extern Scenes currentscene;
 
+extern std::vector<std::string> whitelistedmods;
+
 extern apps apprunning;
